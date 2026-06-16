@@ -7,7 +7,7 @@ import { parse as htmlParser } from "node-html-parser";
 import sanitizeHtml from "sanitize-html";
 
 import { profileConfig, siteConfig } from "@/config";
-import { getSortedPosts } from "@/utils/content-utils";
+import { getSortedPosts, getPostDir } from "@/utils/content-utils";
 import { initPostIdMap } from "@/utils/permalink-utils";
 import { getPostPublicDescription } from "@/utils/post-card-content";
 import { getPostUrl } from "@/utils/url-utils";
@@ -53,10 +53,13 @@ export async function GET(context: APIContext) {
 		const images = html.querySelectorAll("img");
 
 		for (const img of images) {
-			const src = img.getAttribute("src");
-			if (!src) {
+			const rawSrc = img.getAttribute("src");
+			if (!rawSrc) {
 				continue;
 			}
+			// node-html-parser keeps href values URL-encoded, but
+			// import.meta.glob keys match actual filesystem paths (decoded)
+			const src = decodeURIComponent(rawSrc);
 
 			// Handle content-relative images and convert them to built _astro paths
 			if (
@@ -69,10 +72,7 @@ export async function GET(context: APIContext) {
 				if (src.startsWith("./")) {
 					// Path relative to the post file directory
 					const prefixRemoved = src.slice(2);
-					// Check if this post is in a subdirectory (like bestimageapi/index.md)
-					const postPath = post.id; // This gives us the full path like "bestimageapi/index.md"
-					const postDir = postPath.includes("/") ? postPath.split("/")[0] : "";
-
+					const postDir = getPostDir(post);
 					if (postDir) {
 						// For posts in subdirectories
 						importPath = `/src/content/posts/${postDir}/${prefixRemoved}`;
@@ -86,9 +86,7 @@ export async function GET(context: APIContext) {
 					importPath = `/src/content/${cleaned}`;
 				} else {
 					// Handle direct filename (no ./ prefix) - assume it's in the same directory as the post
-					const postPath = post.id; // This gives us the full path like "bestimageapi/index.md"
-					const postDir = postPath.includes("/") ? postPath.split("/")[0] : "";
-
+					const postDir = getPostDir(post);
 					if (postDir) {
 						// For posts in subdirectories
 						importPath = `/src/content/posts/${postDir}/${src}`;
