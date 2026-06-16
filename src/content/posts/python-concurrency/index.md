@@ -4,9 +4,8 @@ published: 2022-11-27
 description: "Python 基于多进程、多线程和多协程的并发编程"
 tags: [python, concurrency, asyncio]
 category: computer-science
-permalink: "python-concurrency"
 pinned: false
-image: "https://api.anosu.top/img/?sort=pc&size=mw1920"
+image: "https://api.anosu.top/img/?sort=pc&size=mw1920&t=1781645178"
 licenseName: "CC BY-SA 4.0"
 author: "律回"
 draft: false

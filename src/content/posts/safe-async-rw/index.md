@@ -4,9 +4,8 @@ published: 2023-09-01
 description: "安全异步读写，是并发控制中的经典问题"
 tags: ["python", "asyncio", "async", "concurrency"]
 category: "computer-science"
-permalink: "safe-async-rw"
 pinned: false
-image: "https://api.anosu.top/img/?sort=pc&size=mw1920"
+image: "https://api.anosu.top/img/?sort=pc&size=mw1920&t=1781645181"
 licenseName: "CC BY-SA 4.0"
 author: "律回"
 draft: false

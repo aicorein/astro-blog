@@ -4,9 +4,8 @@ published: 2022-06-16
 description: "Apache Jena 查询配置 FAQs"
 tags: ["知识图谱", "apachejena"]
 category: "computer-science"
-permalink: "apache-jena-qa"
 pinned: false
-image: "https://api.anosu.top/img/?sort=pc&size=mw1920"
+image: "https://api.anosu.top/img/?sort=pc&size=mw1920&t=1781645165"
 licenseName: "CC BY-SA 4.0"
 author: "律回"
 draft: false

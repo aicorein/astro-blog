@@ -4,9 +4,8 @@ published: 2022-06-05
 description: "使用 Apache Jena 构建知识图谱查询服务"
 tags: ["知识图谱", "python", "apachejena"]
 category: "computer-science"
-permalink: "apache-jena"
 pinned: false
-image: "https://api.anosu.top/img/?sort=pc&size=mw1920"
+image: "https://api.anosu.top/img/?sort=pc&size=mw1920&t=1781645164"
 licenseName: "CC BY-SA 4.0"
 author: "律回"
 draft: false

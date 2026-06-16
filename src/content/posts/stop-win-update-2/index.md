@@ -4,9 +4,8 @@ published: 2022-09-13
 description: "停止 win11 更新的新方法"
 tags: ["windows"]
 category: "computer-science"
-permalink: "stop-win-update-2"
 pinned: false
-image: "https://api.anosu.top/img/?sort=pc&size=mw1920"
+image: "https://api.anosu.top/img/?sort=pc&size=mw1920&t=1781645183"
 licenseName: "CC BY-SA 4.0"
 author: "律回"
 draft: false

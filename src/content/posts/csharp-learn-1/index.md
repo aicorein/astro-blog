@@ -4,9 +4,8 @@ published: 2023-02-04
 description: "C# 是一种基于 .NET 框架的、面向对象的高级编程语言"
 tags: ["csharp"]
 category: "computer-science"
-permalink: "csharp-learn-1"
 pinned: false
-image: "https://api.anosu.top/img/?sort=pc&size=mw1920"
+image: "https://api.anosu.top/img/?sort=pc&size=mw1920&t=1781645168"
 licenseName: "CC BY-SA 4.0"
 author: "律回"
 draft: false

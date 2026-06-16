@@ -4,9 +4,8 @@ published: 2024-08-06
 description: "Python 导入系统的机制与原理"
 tags: ["python"]
 category: computer-science
-permalink: "pyq1-python-import-system"
 pinned: false
-image: "https://api.anosu.top/img/?sort=pc&size=mw1920"
+image: "https://api.anosu.top/img/?sort=pc&size=mw1920&t=1781645177"
 licenseName: "CC BY-SA 4.0"
 author: "律回"
 draft: false

@@ -4,9 +4,8 @@ published: 2022-07-28
 description: "使用 Vue 构建用户界面，极大的提高了前端开发的效率和体验"
 tags: ["vue", "nodejs", "javascript", "html", "css", "cros", "axios"]
 category: "computer-science"
-permalink: "vue-learn"
 pinned: false
-image: "https://api.anosu.top/img/?sort=pc&size=mw1920"
+image: "https://api.anosu.top/img/?sort=pc&size=mw1920&t=1781645184"
 licenseName: "CC BY-SA 4.0"
 author: "律回"
 draft: false

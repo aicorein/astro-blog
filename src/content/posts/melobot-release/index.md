@@ -4,9 +4,8 @@ published: 2022-12-15
 description: "melobot 是支持多协议、多路 IO 和丰富功能的机器人开发框架"
 tags: [melobot, python, asyncio, concurrency, async]
 category: computer-science
-permalink: "melobot-release"
 pinned: false
-image: "https://api.anosu.top/img/?sort=pc&size=mw1920"
+image: "https://api.anosu.top/img/?sort=pc&size=mw1920&t=1781645174"
 licenseName: "CC BY-SA 4.0"
 author: "律回"
 draft: false

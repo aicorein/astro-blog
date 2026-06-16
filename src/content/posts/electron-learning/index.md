@@ -4,9 +4,8 @@ published: 2022-03-31
 description: "Electron，使用 JS、H5C3 构建跨平台桌面应用"
 tags: [electron, javascript, nodejs]
 category: computer-science
-permalink: "electron-learning"
 pinned: false
-image: "https://api.anosu.top/img/?sort=pc&size=mw1920"
+image: "https://api.anosu.top/img/?sort=pc&size=mw1920&t=1781645170"
 licenseName: "CC BY-SA 4.0"
 author: "律回"
 draft: false

@@ -4,9 +4,8 @@ published: 2022-11-25
 description: "基于 Python 的常见设计模式实现"
 tags: ["python"]
 category: "computer-science"
-permalink: "python-patterns"
 pinned: false
-image: "https://api.anosu.top/img/?sort=pc&size=mw1920"
+image: "https://api.anosu.top/img/?sort=pc&size=mw1920&t=1781645180"
 licenseName: "CC BY-SA 4.0"
 author: "律回"
 draft: false

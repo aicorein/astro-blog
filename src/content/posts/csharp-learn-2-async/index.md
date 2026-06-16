@@ -4,9 +4,8 @@ published: 2023-02-16
 description: "C# 的异步主要包括基于线程、线程池和 Task 调度实现的协程"
 tags: ["csharp", "async", "concurrency"]
 category: computer-science
-permalink: "csharp-learn-2-async"
 pinned: false
-image: "https://api.anosu.top/img/?sort=pc&size=mw1920"
+image: "https://api.anosu.top/img/?sort=pc&size=mw1920&t=1781645169"
 licenseName: "CC BY-SA 4.0"
 author: "律回"
 draft: false

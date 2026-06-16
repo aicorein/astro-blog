@@ -4,9 +4,8 @@ published: 2021-10-18
 description: "H5C3、JS —— 前端知识大厦的根基"
 tags: ["html", "css", "javascript"]
 category: computer-science
-permalink: "h5c3-and-js-note"
 pinned: false
-image: "https://api.anosu.top/img/?sort=pc&size=mw1920"
+image: "https://api.anosu.top/img/?sort=pc&size=mw1920&t=1781645171"
 licenseName: "CC BY-SA 4.0"
 author: "律回"
 draft: false

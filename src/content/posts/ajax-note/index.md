@@ -4,9 +4,8 @@ published: 2021-11-01
 description: "AJAX —— 不刷新网页情况下的数据交互"
 tags: [javascript, jquery, ajax]
 category: computer-science
-permalink: "ajax-note"
 pinned: false
-image: "https://api.anosu.top/img/?sort=pc&size=mw1920"
+image: "https://api.anosu.top/img/?sort=pc&size=mw1920&t=1781645163"
 licenseName: "CC BY-SA 4.0"
 author: "律回"
 draft: false

@@ -4,9 +4,8 @@ published: 2022-05-05
 description: "Promise —— JS 异步编程新解决方案"
 tags: ["promise", "javascript", "ajax", "nodejs"]
 category: "computer-science"
-permalink: "promise-learn"
 pinned: false
-image: "https://api.anosu.top/img/?sort=pc&size=mw1920"
+image: "https://api.anosu.top/img/?sort=pc&size=mw1920&t=1781645176"
 licenseName: "CC BY-SA 4.0"
 author: "律回"
 draft: false

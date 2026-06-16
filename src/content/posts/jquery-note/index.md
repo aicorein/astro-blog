@@ -4,9 +4,8 @@ published: 2021-11-01
 description: "jQuery —— 前端使用最为广泛的 JS 库"
 tags: ["javascript", "jquery"]
 category: "computer-science"
-permalink: "jquery-note"
 pinned: false
-image: "https://api.anosu.top/img/?sort=pc&size=mw1920"
+image: "https://api.anosu.top/img/?sort=pc&size=mw1920&t=1781645172"
 licenseName: "CC BY-SA 4.0"
 author: "律回"
 draft: false
