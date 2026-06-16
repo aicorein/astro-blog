@@ -132,105 +132,56 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Home,
 		// 预设链接：归档
 		LinkPreset.Archive,
-
-		// 自定义一级下拉菜单示例：外部链接集合
+		LinkPreset.Albums,
 		{
-			name: "Links",
-			url: "/links/",
-			icon: "material-symbols:link",
-			children: [
-				{
-					name: "GitHub",
-					url: "https://github.com/LyraVoid/Mizuki",
-					external: true, // 外部链接，新标签页打开
-					icon: "fa7-brands:github",
-				},
-				{
-					name: "Bilibili",
-					url: "https://space.bilibili.com/701864046",
-					external: true,
-					icon: "fa7-brands:bilibili",
-				},
-				{
-					name: "Gitee",
-					url: "https://gitee.com/matsuzakayuki/Mizuki",
-					external: true,
-					icon: "mdi:git",
-				},
-			],
+			name: "设备",
+			url: "/devices/",
+			icon: "material-symbols:devices",
 		},
-
-		// 自定义一级下拉菜单示例：个人内容页面
-		{
-			name: "My",
-			url: "/content/",
-			icon: "material-symbols:person",
-			children: [
-				{
-					name: "Anime",
-					url: "/anime/",
-					icon: "material-symbols:movie",
-				},
-				{
-					name: "Diary",
-					url: "/diary/",
-					icon: "material-symbols:book",
-				},
-				{
-					name: "Gallery",
-					url: "/albums/",
-					icon: "material-symbols:photo-library",
-				},
-				{
-					name: "Devices",
-					url: "/devices/",
-					icon: "material-symbols:devices",
-					external: false, // 内部链接，当前页导航
-				},
-			],
-		},
+		LinkPreset.Friends,
 
 		// 自定义一级下拉菜单示例：关于相关
 		{
-			name: "About",
-			url: "/content/",
+			name: "关于",
+			url: "/",
 			icon: "material-symbols:info",
 			children: [
 				{
-					name: "About",
+					name: "关于本站",
 					url: "/about/",
-					icon: "material-symbols:person",
+					icon: "mdi:flag-variant",
 				},
 				{
-					name: "Friends",
-					url: "/friends/",
-					icon: "material-symbols:group",
-				},
+					name: "关于我",
+					url: "/about-me/",
+					icon: "material-symbols:person"
+				}
 			],
 		},
 
-		// 自定义一级下拉菜单示例：其他页面
 		{
-			name: "Others",
-			url: "#", // "#" 作为占位 URL，点击不会跳转
-			icon: "material-symbols:more-horiz",
+			name: "信息",
+			url: "/",
+			icon: "mdi:information",
 			children: [
 				{
-					name: "Projects",
-					url: "/projects/",
-					icon: "material-symbols:work",
+					name: "访问统计",
+					url: "https://melo-blog-umami.netlify.app/share/Lqq8LsiX6y5wxd2j",
+					icon: "mdi:chart-timeline-variant-shimmer",
+					external: true,
 				},
 				{
-					name: "Skills",
-					url: "/skills/",
-					icon: "material-symbols:psychology",
+					name: "站点地图",
+					url: "/sitemap-index.xml",
+					icon: "mdi:map",
+					external: true,
 				},
 				{
-					name: "Timeline",
-					url: "/timeline/",
-					icon: "material-symbols:timeline",
-				},
-			],
+					name: "RSS 订阅",
+					url: "/rss/",
+					icon: "mdi:rss",
+				}
+			]
 		},
 	],
 };

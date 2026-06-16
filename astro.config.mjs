@@ -51,7 +51,7 @@ export default defineConfig({
 	integrations: [
 		oddmisc({
 			umami: {
-				shareUrl: false,
+				shareUrl: "https://melo-blog-umami.netlify.app/share/Lqq8LsiX6y5wxd2j",
 			},
 		}),
 		swup({

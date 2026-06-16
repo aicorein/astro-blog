@@ -1,0 +1,14 @@
+{
+	"title": "默认",
+	"hidden": false,
+	"description": "一些二次元的图片",
+	"date": "2025-08-01",
+	"tags": [
+		"二次元",
+		"可爱",
+		"萌"
+	],
+	"layout": "masonry",
+	"location": "网络",
+	"columns": 3
+}

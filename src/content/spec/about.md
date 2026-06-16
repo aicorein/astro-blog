@@ -1,49 +1,33 @@
+## 建站历程
 
-This website is built with the **Astro** framework using the [Mizuki](https://github.com/LyraVoid/Mizuki) theme.
+最开始的话，是使用 halo 建站。后来有了 halo2 之后，遂迁移到 halo2。但 halo2 比较重，自定义前端还需要修改样式或者注入 js 脚本，不是很优雅。而且最重要的：**跑后端的服务器续费也不便宜**。
+
+2025 年还经历过一次站点数据丢失，最后的数据还是从 Wayback Machine（互联网档案馆）找回来的。页面内容是全部恢复了，但访问数据和评论全部丢失。只能说：**备份也是每个站长的必修课**。如果不认真去做，总有一天会吃大亏。
+
+于是最后决定转向 Astro + Mizuki。Astro 的理念是我比较喜欢的，它也很方便与其他前端框架组合（可玩性不错），最后还能快捷地生成静态页面。如果想自定义一些后端服务，当今时代让 Agent 帮忙起一个 serverless 服务也就完事~
+
+只能说时过境迁，技术也是不断更新迭代的，那我也自然会跟上时代的步伐。
+
+## 站点规划
+
+站点主要是作为一个信息分享的平台及我个人的展示窗口。~~虽然不一定有多少人看~~。
+
+技术性内容（计算机、音乐创作）的分享是本站的重点内容。合适的话，会提供一些我自己想法和见解。
+
+如果本站的信息帮助到了你，欢迎你把它分享给你的朋友~
+
+如果还能同时获得你的关注，那会是我的荣幸 :)
+
+## 站点信息
+
+本站基于 Mizuki 主题修改。它是一款非常优秀的主题。你如果正好也需要一个高颜值的个人博客，可以去看看：
 
 ::github{repo="LyraVoid/Mizuki"}
 
-## 🌟 Theme Features
+> 如果你不熟悉 Astro，最好先学习一下官方的[简明教程](https://docs.astro.build/en/tutorial/0-introduction/)。我会自诩为一个写文档还不错的 dev，但是我觉得 Astro 的文档还是写的很不错的hhh
 
-### 🎨 Design & User Experience
-- **Modern & Elegant Design** - Clean, minimalist interface with beautiful typography
-- **Fully Responsive** - Optimized for all devices from mobile to desktop
-- **Dark/Light Mode** - Automatic theme switching with smooth transitions
-- **Beautiful Typography** - Enhanced readability with JetBrains Mono font
-- **Smooth Animations** - Fluid page transitions and interactive elements
+此外，本站几乎所有内容都在 github 开源：
 
-### 🔍 Content & Search
-- **Advanced Search** - Powered by [Pagefind](https://pagefind.app/) for fast, accurate results
-- **Enhanced Markdown** - Extended syntax with code highlighting and math support
-- **Interactive Table of Contents** - Auto-scroll navigation for long articles
-- **RSS Feed Generation** - Stay updated with automatic feed generation
-- **Reading Time Estimation** - Know how long articles take to read
-- **Post Categorization** - Organize content with tags and categories
+::github{repo="aicorein/astro-blog"}
 
-
-
-### 📱 Special Pages
-- **Anime Tracking Page** - Track your anime watching progress with ratings
-- **Friends Links Page** - Showcase friend websites with beautiful cards
-- **Diary/Moments Page** - Share life moments like social media posts
-- **Archive Page** - Organized timeline view of all posts
-- **About Page** - Customizable personal introduction (this page!)
-
-### 🛠 Technical Features
-- **Enhanced Code Blocks** - Powered by [Expressive Code](https://expressive-code.com/)
-- **Math Support** - LaTeX rendering with KaTeX for mathematical expressions
-- **Image Optimization** - PhotoSwipe gallery with lazy loading
-- **SEO Optimized** - Built-in sitemap and meta tags for better search visibility
-- **Performance Optimized** - Fast loading with caching and optimization
-- **Comment System Ready** - Integration support for Twikoo comments
-
-### 🎯 Advanced Markdown Features
-- **Callouts & Admonitions** - Beautiful info boxes with `> [!NOTE]`, `> [!TIP]`, `> [!WARNING]`
-- **Mathematical Equations** - Write LaTeX math with `$inline$` and `$$block$$` syntax
-- **GitHub Cards** - Embed repository cards with `::github{repo="user/repo"}`
-- **Syntax Highlighting** - Advanced code highlighting with line numbers
-- **Copy Code Buttons** - Easy code copying functionality
-
----
-
-*Built with ❤️ using Astro and inspired by modern web design principles.*
+欢迎前来指正文章错误，或提出改进建议！你甚至可以发起 Pull Request 哦~
