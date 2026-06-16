@@ -69,6 +69,11 @@
   }
 }
 
+/* 代码块间隔 */
+.expressive-code + .expressive-code {
+  margin-top: 1.25rem;
+}
+
 /* 代码块折叠功能 (Collapsible) */
 .expressive-code.collapsible .frame {
   transition: background-color 0.2s ease;
