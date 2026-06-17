@@ -171,6 +171,12 @@ export const navBarConfig: NavBarConfig = {
 					external: true,
 				},
 				{
+					name: "状态监控",
+					url: "https://stats.uptimerobot.com/OR4lyfNzpn",
+					icon: "mdi:server-network",
+					external: true,
+				},
+				{
 					name: "站点地图",
 					url: "/sitemap-index.xml",
 					icon: "mdi:map",
