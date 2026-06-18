@@ -45,14 +45,6 @@ export const friendsData: FriendItem[] = [
 		tags: ["朋友们"],
 	},
 	{
-		id: 5,
-		title: "Jitsuの空",
-		imgurl: "https://pic.rmb.bdstatic.com/bjh/f0109cd85a568245275b6d2e91e3dc94.jpeg",
-		desc: "18岁，是学生",
-		siteurl: "https://blog.jitsu.top/",
-		tags: ["朋友们"],
-	},
-	{
 		id: 6,
 		title: "小小黑的个人小站",
 		imgurl: "https://lonelyenderman.top/wp-content/uploads/2022/03/logoo.jpeg",
@@ -100,14 +92,14 @@ export const friendsData: FriendItem[] = [
 		siteurl: "https://blog.laoda.de/",
 		tags: ["朋友们"],
 	},
-	{
-		id: 12,
-		title: "小鹿生活志",
-		imgurl: "https://q1.qlogo.cn/g?b=qq&nk=1169702115&s=100",
-		desc: "一个写故事的博客",
-		siteurl: "https://www.t223.top/",
-		tags: ["朋友们"],
-	},
+	// {
+	// 	id: 12,
+	// 	title: "小鹿生活志",
+	// 	imgurl: "https://q1.qlogo.cn/g?b=qq&nk=1169702115&s=100",
+	// 	desc: "一个写故事的博客",
+	// 	siteurl: "https://www.t223.top/",
+	// 	tags: ["朋友们"],
+	// },
 	{
 		id: 13,
 		title: "秋水墨色染",
