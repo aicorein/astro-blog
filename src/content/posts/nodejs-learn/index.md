@@ -5,7 +5,7 @@ description: "Node.js —— 让 JavaScript 成为与等服务端语言平起平
 tags: ["cros", "express", "npm", "javascript", "session", "jwt", "nodejs"]
 category: "computer-science"
 pinned: false
-image: "https://api.anosu.top/img/?sort=pc&size=mw1920&t=1781645175"
+image: "https://miku.top/[dyn-img]"
 licenseName: "CC BY-SA 4.0"
 author: "律回"
 draft: false

@@ -5,7 +5,7 @@ description: "Vuex 是实现组件全局状态（数据）管理的一种方式"
 tags: [vue, vuex, nodejs, html, javascript, css]
 category: computer-science
 pinned: false
-image: "https://api.anosu.top/img/?sort=pc&size=mw1920&t=1781645185"
+image: "https://miku.top/[dyn-img]"
 licenseName: "CC BY-SA 4.0"
 author: "律回"
 draft: false

@@ -5,7 +5,7 @@ description: "使用 Vue 构建用户界面，极大的提高了前端开发的�
 tags: ["vue", "nodejs", "javascript", "html", "css", "cros", "axios"]
 category: "computer-science"
 pinned: false
-image: "https://api.anosu.top/img/?sort=pc&size=mw1920&t=1781645184"
+image: "https://miku.top/[dyn-img]"
 licenseName: "CC BY-SA 4.0"
 author: "律回"
 draft: false

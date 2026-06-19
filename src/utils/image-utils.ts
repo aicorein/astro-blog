@@ -53,3 +53,7 @@ export function shouldAddNoReferrer(urlStr: string): boolean {
 		return false;
 	}
 }
+
+export function isDynamicImage(urlStr: string): boolean {
+	return urlStr.startsWith("https://miku.top/[dyn-img]");
+}

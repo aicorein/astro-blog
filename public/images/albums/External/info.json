@@ -12,94 +12,94 @@
 	],
 	"layout": "masonry",
 	"columns": 3,
-	"cover": "https://api.anosu.top/img/?postid=1&sort=all&mw=1920",
+	"cover": "/images/albums/Acg/4.webp",
 	"photos": [
 		{
-			"src": "https://api.anosu.top/img/?postid=2&sort=all&mw=1920",
+			"src": "https://miku.top/[dyn-img]",
 			"alt": "随机图片"
 		},
 		{
-			"src": "https://api.anosu.top/img/?postid=3&sort=pc&mw=1920",
+			"src": "https://miku.top/[dyn-img]",
 			"alt": "随机图片"
 		},
 		{
-			"src": "https://api.anosu.top/img/?postid=4&sort=all&mw=1920",
+			"src": "https://miku.top/[dyn-img]",
 			"alt": "随机图片"
 		},
 		{
-			"src": "https://api.anosu.top/img/?postid=5&sort=all&mw=1920",
+			"src": "https://miku.top/[dyn-img]",
 			"alt": "随机图片"
 		},
 		{
-			"src": "https://api.anosu.top/img/?postid=6&sort=pc&mw=1920",
+			"src": "https://miku.top/[dyn-img]",
 			"alt": "随机图片"
 		},
 		{
-			"src": "https://api.anosu.top/img/?postid=7&sort=pc&mw=1920",
+			"src": "https://miku.top/[dyn-img]",
 			"alt": "随机图片"
 		},
 		{
-			"src": "https://api.anosu.top/img/?postid=8&sort=pc&mw=1920",
+			"src": "https://miku.top/[dyn-img]",
 			"alt": "随机图片"
 		},
 		{
-			"src": "https://api.anosu.top/img/?postid=9&sort=all&mw=1920",
+			"src": "https://miku.top/[dyn-img]",
 			"alt": "随机图片"
 		},
 		{
-			"src": "https://api.anosu.top/img/?postid=10&sort=all&mw=1920",
+			"src": "https://miku.top/[dyn-img]",
 			"alt": "随机图片"
 		},
 		{
-			"src": "https://api.anosu.top/img/?postid=11&sort=pc&mw=1920",
+			"src": "https://miku.top/[dyn-img]",
 			"alt": "随机图片"
 		},
 		{
-			"src": "https://api.anosu.top/img/?postid=12&sort=all&mw=1920",
+			"src": "https://miku.top/[dyn-img]",
 			"alt": "随机图片"
 		},
 		{
-			"src": "https://api.anosu.top/img/?postid=13&sort=all&mw=1920",
+			"src": "https://miku.top/[dyn-img]",
 			"alt": "随机图片"
 		},
 		{
-			"src": "https://api.anosu.top/img/?postid=14&sort=pc&mw=1920",
+			"src": "https://miku.top/[dyn-img]",
 			"alt": "随机图片"
 		},
 		{
-			"src": "https://api.anosu.top/img/?postid=15&sort=all&mw=1920",
+			"src": "https://miku.top/[dyn-img]",
 			"alt": "随机图片"
 		},
 		{
-			"src": "https://api.anosu.top/img/?postid=16&sort=all&mw=1920",
+			"src": "https://miku.top/[dyn-img]",
 			"alt": "随机图片"
 		},
 		{
-			"src": "https://api.anosu.top/img/?postid=17&sort=pc&mw=1920",
+			"src": "https://miku.top/[dyn-img]",
 			"alt": "随机图片"
 		},
 		{
-			"src": "https://api.anosu.top/img/?postid=18&sort=pc&mw=1920",
+			"src": "https://miku.top/[dyn-img]",
 			"alt": "随机图片"
 		},
 		{
-			"src": "https://api.anosu.top/img/?postid=19&sort=pc&mw=1920",
+			"src": "https://miku.top/[dyn-img]",
 			"alt": "随机图片"
 		},
 		{
-			"src": "https://api.anosu.top/img/?postid=20&sort=all&mw=1920",
+			"src": "https://miku.top/[dyn-img]",
 			"alt": "随机图片"
 		},
 		{
-			"src": "https://api.anosu.top/img/?postid=21&sort=all&mw=1920",
+			"src": "https://miku.top/[dyn-img]",
 			"alt": "随机图片"
 		},
 		{
-			"src": "https://api.anosu.top/img/?postid=22&sort=pc&mw=1920",
+			"src": "https://miku.top/[dyn-img]",
 			"alt": "随机图片"
 		},
 		{
-			"src": "https://api.anosu.top/img/?postid=23&sort=all&mw=1920",
+			"src": "https://miku.top/[dyn-img]",
 			"alt": "随机图片"
 		}
 	]

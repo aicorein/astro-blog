@@ -5,7 +5,7 @@ description: "安全异步读写，是并发控制中的经典问题"
 tags: ["python", "asyncio", "async", "concurrency"]
 category: "computer-science"
 pinned: false
-image: "https://api.anosu.top/img/?sort=pc&size=mw1920&t=1781645181"
+image: "https://miku.top/[dyn-img]"
 licenseName: "CC BY-SA 4.0"
 author: "律回"
 draft: false

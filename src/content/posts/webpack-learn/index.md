@@ -5,7 +5,7 @@ description: "Webpack 是用于现代 JavaScript 程序的模块打包工具"
 tags: ["npm", "javascript", "webpack", "nodejs"]
 category: "computer-science"
 pinned: false
-image: "https://api.anosu.top/img/?sort=pc&size=mw1920&t=1781645186"
+image: "https://miku.top/[dyn-img]"
 licenseName: "CC BY-SA 4.0"
 author: "律回"
 draft: false

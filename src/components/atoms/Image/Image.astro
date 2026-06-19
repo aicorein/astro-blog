@@ -7,6 +7,7 @@ import {
 	getImageFormats,
 	getImageQuality,
 	shouldAddNoReferrer,
+	isDynamicImage,
 } from "../../../utils/image-utils";
 
 import { url } from "../../../utils/url-utils";
@@ -81,6 +82,7 @@ const imageStyle = `object-position: ${position}`;
 
 // 基于通配符配置检查是否需要添加 referrerpolicy（仅对非本地图片）
 const fullSrc = isPublic ? url(src) : src;
+const isDyn = isDynamicImage(fullSrc);
 const referrerPolicy =
 	!isLocal && shouldAddNoReferrer(fullSrc) ? "no-referrer" : undefined;
 
@@ -127,7 +129,20 @@ const responsiveProps = {
 		)
 	}
 	{
-		!isLocal && (
+		!isLocal && isDyn && (
+			<img
+				src="/static/loading.svg"
+				alt={alt || ""}
+				class={`${imageClass} dyn-mikutop-image`}
+				style={imageStyle}
+				loading={loading}
+				referrerpolicy={referrerPolicy}
+				decoding="async"
+			/>
+		)
+	}
+	{
+		!isLocal && !isDyn && (
 			<img
 				src={isPublic ? url(src) : src}
 				alt={alt || ""}
