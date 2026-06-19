@@ -7,7 +7,8 @@ import { parse as htmlParser } from "node-html-parser";
 import sanitizeHtml from "sanitize-html";
 
 import { profileConfig, siteConfig } from "@/config";
-import { getSortedPosts, getPostDir } from "@/utils/content-utils";
+import { getSortedPosts } from "@/utils/content-utils";
+import { resolvePostContentImageImportPath } from "@/utils/feed-image-utils";
 import { initPostIdMap } from "@/utils/permalink-utils";
 import { getPostPublicDescription } from "@/utils/post-card-content";
 import { getPostUrl } from "@/utils/url-utils";
@@ -67,33 +68,9 @@ export async function GET(context: APIContext) {
 				src.startsWith("../") ||
 				(!src.startsWith("http") && !src.startsWith("/"))
 			) {
-				let importPath: string | null = null;
-
-				if (src.startsWith("./")) {
-					// Path relative to the post file directory
-					const prefixRemoved = src.slice(2);
-					const postDir = getPostDir(post);
-					if (postDir) {
-						// For posts in subdirectories
-						importPath = `/src/content/posts/${postDir}/${prefixRemoved}`;
-					} else {
-						// For posts directly in posts directory
-						importPath = `/src/content/posts/${prefixRemoved}`;
-					}
-				} else if (src.startsWith("../")) {
-					// Path like ../assets/images/xxx -> relative to /src/content/
-					const cleaned = src.replace(/^\.\.\//, "");
-					importPath = `/src/content/${cleaned}`;
-				} else {
-					// Handle direct filename (no ./ prefix) - assume it's in the same directory as the post
-					const postDir = getPostDir(post);
-					if (postDir) {
-						// For posts in subdirectories
-						importPath = `/src/content/posts/${postDir}/${src}`;
-					} else {
-						// For posts directly in posts directory
-						importPath = `/src/content/posts/${src}`;
-					}
+				const importPath = resolvePostContentImageImportPath(post, src);
+				if (!importPath) {
+					continue;
 				}
 
 				const imageMod = await imagesGlob[importPath]?.()?.then(

@@ -391,17 +391,3 @@ export async function getRelatedPosts(
 
 	return result;
 }
-
-export function getPostDir(post: { filePath?: string; id: string }) {
-	let dirFromPath = "";
-	let dirFromId = "";
-
-	if (post.filePath) {
-		const relPath = post.filePath.replace(/^src\/content\/posts\//, "");
-		dirFromPath = relPath.includes("/") ? relPath.split("/").slice(0, -1).join("/") : "";
-	}
-	const postPath = post.id;
-	dirFromId = postPath.includes("/") ? postPath.split("/")[0] : "";
-	
-	return dirFromPath || dirFromId;
-}
