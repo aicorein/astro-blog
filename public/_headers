@@ -1,3 +1,9 @@
+/*
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/*/*
+  Cache-Control: public, max-age=3600, must-revalidate
+
 /atom.xml
   Access-Control-Allow-Origin: *
   Access-Control-Allow-Methods: GET
@@ -22,9 +28,3 @@
 
 /*.woff2
   Cache-Control: public, max-age=31536000, immutable
-
-/index.html
-  Cache-Control: public, max-age=3600, must-revalidate
-
-*.html
-  Cache-Control: public, max-age=3600, must-revalidate
