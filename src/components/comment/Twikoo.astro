@@ -21,9 +21,20 @@ const config = {
 		const TWIKOO_CONTAINER_ID = "twikoo-container";
 		const TWIKOO_SCRIPT_URL = "/assets/js/twikoo.all.min.js";
 		const ROOT_MARGIN = "200px";
+		const GLOBAL_KEY = "__twikoo";
 
-		let observer = null;
 		let twikooLoaded = false;
+
+		function getState() {
+			if (!window[GLOBAL_KEY]) {
+				window[GLOBAL_KEY] = {
+					observer: null,
+					swupHooked: false,
+					eventsBound: false,
+				};
+			}
+			return window[GLOBAL_KEY];
+		}
 
 		function getCurrentPath() {
 			const pathname = window.location.pathname;
@@ -67,6 +78,19 @@ const config = {
 				return;
 			}
 
+			// Swup 生产模式下 updateHead: true 会在页面切换时替换 <head>，
+			// twikoo.all.min.js 注入的 Element UI 样式标签会随之丢失。
+			// 此时 window.twikoo 仍然存在，库再次执行时会跳过初始化（从而跳过样式注入）。
+			// 删除全局实例，强制库在下次加载时完整重新初始化，确保样式被重新注入。
+			if (window.twikoo) {
+				delete window.twikoo;
+				const oldScript = document.getElementById(
+					"twikoo-script-loaded",
+				);
+				if (oldScript) oldScript.remove();
+				twikooLoaded = false;
+			}
+
 			try {
 				await loadTwikooScript();
 
@@ -84,9 +108,10 @@ const config = {
 		}
 
 		function cleanup() {
-			if (observer) {
-				observer.disconnect();
-				observer = null;
+			const state = getState();
+			if (state.observer) {
+				state.observer.disconnect();
+				state.observer = null;
 			}
 			if (window.swup?.hooks) {
 				window.swup.hooks.off("content:replace", initTwikoo);
@@ -99,21 +124,34 @@ const config = {
 				return;
 			}
 
-			observer = new IntersectionObserver(
+			const state = getState();
+
+			// Disconnect any existing observer before creating a new one,
+			// preventing multiple observers from watching the same element.
+			if (state.observer) {
+				state.observer.disconnect();
+				state.observer = null;
+			}
+
+			state.observer = new IntersectionObserver(
 				(entries) => {
-					if (entries[0].isIntersecting) {
-						observer.disconnect();
-						observer = null;
+					if (entries[0]?.isIntersecting && state.observer) {
+						state.observer.disconnect();
+						state.observer = null;
 						initTwikoo();
 					}
 				},
 				{ rootMargin: ROOT_MARGIN },
 			);
 
-			observer.observe(container);
+			state.observer.observe(container);
 		}
 
 		function setupSwupHooks() {
+			const state = getState();
+			if (state.swupHooked) return;
+			state.swupHooked = true;
+
 			if (window.swup?.hooks) {
 				window.swup.hooks.on("content:replace", () => {
 					setTimeout(setupLazyLoad, 200);
@@ -133,11 +171,19 @@ const config = {
 			}
 		}
 
-		document.addEventListener("mizuki:page:loaded", () => {
-			setupLazyLoad();
-		});
+		function bindEvents() {
+			const state = getState();
+			if (state.eventsBound) return;
+			state.eventsBound = true;
 
-		window.addEventListener("beforeunload", cleanup);
+			document.addEventListener("mizuki:page:loaded", () => {
+				setupLazyLoad();
+			});
+
+			window.addEventListener("beforeunload", cleanup);
+		}
+
+		bindEvents();
 
 		if (document.readyState === "loading") {
 			document.addEventListener("DOMContentLoaded", () => {
