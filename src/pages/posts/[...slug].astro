@@ -31,10 +31,7 @@ import {
 import Image from "../../components/atoms/Image/Image.astro";
 import Encryptor from "../../components/features/auth/Encryptor.astro";
 import { profileConfig, siteConfig } from "../../config";
-import {
-	formatDateForDisplay,
-	formatDateForJsonLd,
-} from "../../utils/date-utils";
+import { formatDateToYYYYMMDD } from "../../utils/date-utils";
 
 export async function getStaticPaths() {
 	const blogEntries = await getSortedPosts();
@@ -200,7 +197,7 @@ const jsonLd = {
 		name: profileConfig.name,
 		url: Astro.site,
 	},
-	datePublished: formatDateForJsonLd(entry.data.published),
+	datePublished: formatDateToYYYYMMDD(entry.data.published),
 	inLanguage: entry.data.lang
 		? entry.data.lang.replace("_", "-")
 		: siteConfig.lang.replace("_", "-"),
@@ -218,7 +215,6 @@ const jsonLd = {
 	headings={headings}
 	coverImage={ogCoverUrl}
 	publishedDate={entry.data.published}
-	postDateFormat={entry.data.postDateFormat}
 	category={entry.data.category || undefined}
 	wordCount={remarkPluginFrontmatter.words}
 >
@@ -233,7 +229,7 @@ const jsonLd = {
 		import("../../scripts/right-sidebar-layout.js");
 	</script>
 	<div
-		class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative mb-4"
+		class="flex w-full rounded-(--radius-large) overflow-hidden relative mb-4"
 	>
 		<div
 			id="post-container"
@@ -269,8 +265,8 @@ const jsonLd = {
 					class="transition w-full block font-bold mb-3
                     text-3xl md:text-[2.25rem]/[2.75rem]
                     text-black/90 dark:text-white/90
-                    md:before:w-1 before:h-5 before:rounded-md before:bg-[var(--primary)]
-                    before:absolute before:top-[0.75rem] before:left-[-1.125rem]"
+                    md:before:w-1 before:h-5 before:rounded-md before:bg-(--primary)
+                    before:absolute before:top-3 before:-left-4.5"
 				>
 					{entry.data.title}
 				</div>
@@ -282,7 +278,6 @@ const jsonLd = {
 					className="mb-5"
 					published={entry.data.published}
 					updated={entry.data.updated}
-					dateFormat={entry.data.postDateFormat}
 					tags={entry.data.tags}
 					category={entry.data.category || undefined}
 					id={entry.id}
@@ -292,7 +287,7 @@ const jsonLd = {
 					(!entry.data.image ||
 						(entry.data.image &&
 							!siteConfig.showCoverInContent)) && (
-						<div class="mt-4 border-[var(--line-divider)] border-dashed border-b-[1px] mb-5" />
+						<div class="mt-4 border-(--line-divider) border-dashed border-b mb-5" />
 					)
 				}
 			</div>
@@ -340,10 +335,7 @@ const jsonLd = {
 						title={entry.data.title}
 						author={entry.data.author}
 						description={publicDescription}
-						pubDate={formatDateForDisplay(
-							entry.data.published,
-							entry.data.postDateFormat,
-						)}
+						pubDate={formatDateToYYYYMMDD(entry.data.published)}
 						coverImage={posterCoverUrl}
 						url={Astro.url.toString()}
 						siteTitle={siteConfig.title}
@@ -365,7 +357,7 @@ const jsonLd = {
 							title={entry.data.title}
 							id={entry.id}
 							pubDate={entry.data.published}
-							dateFormat={entry.data.postDateFormat}
+
 							author={entry.data.author}
 							sourceLink={entry.data.sourceLink}
 							licenseName={entry.data.licenseName}

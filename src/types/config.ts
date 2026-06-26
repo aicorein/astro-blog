@@ -52,7 +52,6 @@ export interface SiteConfig {
 			enable: boolean; // 是否在文章列表页显示分类导航条
 		};
 	};
-	postDateFormat?: "date" | "datetime"; // 文章日期展示格式：date=YYYY-MM-DD，datetime=YYYY-MM-DD HH:mm:ss
 
 	// 顶栏标题配置
 	navbarTitle?: {
@@ -68,21 +67,7 @@ export interface SiteConfig {
 		targetWidth?: number; // 目标宽度，低于此宽度时开始缩放
 	};
 
-	// 添加字体配置
-	font: {
-		asciiFont: {
-			fontFamily: string;
-			fontWeight: string | number;
-			localFonts: string[];
-			enableCompress: boolean;
-		};
-		cjkFont: {
-			fontFamily: string;
-			fontWeight: string | number;
-			localFonts: string[];
-			enableCompress: boolean;
-		};
-	};
+	// 字体现在通过 astro.config.mjs 的 fonts 选项配置（Astro Font API）
 
 	// 添加bangumi配置
 	bangumi?: {
