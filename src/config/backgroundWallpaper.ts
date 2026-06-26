@@ -4,10 +4,10 @@ export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
 	enable: true,
 	src: {
 		desktop: [
-			"/assets/desktop-banner/background.webp"
+			"https://img.glowmem.com/background.webp"
 		],
 		mobile: [
-			"/assets/mobile-banner/m-background.webp"
+			"https://img.glowmem.com/m-background.webp"
 		],
 	},
 	position: "center",

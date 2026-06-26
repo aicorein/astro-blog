@@ -3,7 +3,7 @@ import type { PhotoCardProps } from "./types";
 import {isDynamicImage} from "../../../utils/image-utils";
 
 const { src, alt = "", albumId } = Astro.props as PhotoCardProps;
-const isDyn = isDynamicImage(src);
+const isDynCover = isDynamicImage(src);
 ---
 
 <div class="gallery-photo-card break-inside-avoid mb-3">
@@ -14,18 +14,18 @@ const isDyn = isDynamicImage(src);
 		class="block rounded-xl overflow-hidden group cursor-pointer"
 	>
 	{
-		isDyn && (
+		isDynCover && (
 			<img
 				src="/static/loading.svg"
 				alt={alt}
 				loading="lazy"
 				decoding="async"
-				class="dyn-mikutop-image w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+				class="dyn-cover-img w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
 			/>
 		)
 	}
 	{
-		!isDyn && (
+		!isDynCover && (
 			<img
 				src={src}
 				alt={alt}

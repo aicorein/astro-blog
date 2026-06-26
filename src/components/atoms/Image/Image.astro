@@ -82,7 +82,7 @@ const imageStyle = `object-position: ${position}`;
 
 // 基于通配符配置检查是否需要添加 referrerpolicy（仅对非本地图片）
 const fullSrc = isPublic ? url(src) : src;
-const isDyn = isDynamicImage(fullSrc);
+const idDynCover = isDynamicImage(fullSrc);
 const referrerPolicy =
 	!isLocal && shouldAddNoReferrer(fullSrc) ? "no-referrer" : undefined;
 
@@ -129,11 +129,11 @@ const responsiveProps = {
 		)
 	}
 	{
-		!isLocal && isDyn && (
+		!isLocal && idDynCover && (
 			<img
 				src="/static/loading.svg"
 				alt={alt || ""}
-				class={`${imageClass} dyn-mikutop-image`}
+				class={`${imageClass} dyn-cover-img`}
 				style={imageStyle}
 				loading={loading}
 				referrerpolicy={referrerPolicy}
@@ -142,7 +142,7 @@ const responsiveProps = {
 		)
 	}
 	{
-		!isLocal && !isDyn && (
+		!isLocal && !idDynCover && (
 			<img
 				src={isPublic ? url(src) : src}
 				alt={alt || ""}
