@@ -1,3 +1,7 @@
+overrides:
+  vite: 8.1.5
+  rolldown: 1.2.0
+
 allowBuilds:
   esbuild: true
   sharp: true
